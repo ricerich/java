@@ -6,39 +6,57 @@ public class EX08 {
 	public static void main(String[] args) 
 	{
 		Scanner sc1 = new Scanner(System.in);
-		System.out.print("두 점 (x1,y1), (x2,y2)를 입력해주세요>>");
-		int x1 = sc1.nextInt();
-		int y1 = sc1.nextInt();
-		int x2 = sc1.nextInt();
-		int y2 = sc1.nextInt();
+		System.out.print("정수 몇 개?(0~100)>>");
+		int cnt = sc1.nextInt();
 		
-		if(inRect(x1,y1, 100, 100, 200, 200)
-		|| inRect(x2,y2, 100, 100, 200, 200)
-		|| inRect(x1,y2, 100, 100, 200, 200)
-		|| inRect(x2,y1, 100, 100, 200, 200) )
-		{
-			System.out.println("사각형이 겹칩니다");
+		if(cnt<0 || cnt>99) {
+			System.out.println("0~100사이의 수를 입력해주세요");
+			sc1.close();
+			return;
 		}
-		else if(inRect(100,100, x1, y1, x2, y2)
-			 && inRect(200,200, x1, y1, x2, y2)
-			 && inRect(100,200, x1, y1, x2, y2)
-			 && inRect(200,100, x1, y1, x2, y2) )
-		{
-			System.out.println("사각형이 겹칩니다");
-		}
-		else
-			System.out.println("사각형이 겹치지 않습니다");
-	}
-	
-	public static boolean inRect(int x, int y,
-								 int rect_x1, int rect_y1, 
-								 int rect_x2, int rect_y2)
-	{
-		if((x>=rect_x1 && x<=rect_x2)  && ( y>=rect_y1 && y<=rect_y2))
-			return true;
-		else 
-			return false;
 		
+		int arr1[] = new int[cnt];
+		
+		for(int i=0; i<arr1.length; i++)
+		{
+			int n = (int)(Math.random()*10 +1);
+			
+			for(int j=0; j<i; ++j)
+			{
+				if(n==arr1[j])//같은게 있으니까 넣으면 안된다
+				{
+					i--;
+				}
+				else//같으게 없으니까 넣어도 된다
+				{
+					arr1[i] = n;		
+				}
+					
+			}
+			
+			
+		}
+		
+		for(int i=0; i<arr1.length; i++)
+		{
+			if(i==0) {
+				System.out.print(arr1[i]+" ");
+			}
+			else
+			{
+				if(i%10==0)
+					System.out.println();
+				
+				System.out.print(arr1[i]+" ");
+			}
+		}
+		
+		
+		
+		
+		sc1.close();
 	}
-
 }
+
+
+
