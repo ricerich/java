@@ -1,3 +1,4 @@
+package ex03.problem;
 import java.util.Scanner;
 
 public class EX12_1_if {

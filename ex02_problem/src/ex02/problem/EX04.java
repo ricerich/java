@@ -1,3 +1,4 @@
+package ex02.problem;
 import java.util.Scanner;
 
 public class EX04 {
