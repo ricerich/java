@@ -19,22 +19,26 @@ public class EX08 {
 		
 		for(int i=0; i<arr1.length; i++)
 		{
-			int n = (int)(Math.random()*10 +1);
+			int n = (int)(Math.random()*100 +1);
 			
-			for(int j=0; j<i; ++j)
+			if(i==0)
+				arr1[i] = n;
+			else
 			{
-				if(n==arr1[j])//같은게 있으니까 넣으면 안된다
+				for(int j=0; j<i; ++j)
 				{
-					i--;
-				}
-				else//같으게 없으니까 넣어도 된다
-				{
+					if(n==arr1[j])//같은게 있으니까 넣으면 안된다
+					{
+						i--;
+						break;
+					}
+					
 					arr1[i] = n;		
 				}
-					
 			}
 			
-			
+
+		
 		}
 		
 		for(int i=0; i<arr1.length; i++)
