@@ -1,4 +1,4 @@
-package OOP;
+package ex04.example.OOP;
 
 public class EX01_BASIC 
 {

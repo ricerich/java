@@ -20,6 +20,9 @@ public class A {
 	
 	void addObj(C c1)
 	{
+		C c2 = new C();
+		c2 = c1;
+		
 		c1.n++ ;
 		System.out.println("A안의 c1.n값은=" + c1.n);
 	}

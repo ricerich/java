@@ -1,6 +1,10 @@
 package ex04.example.CALL_BY;
 
-public class Basic {
+class D{
+	
+}
+
+class Basic {
 
 	public static void main(String[] args) 
 	{
@@ -29,14 +33,6 @@ public class Basic {
 		a3.addObj(c1);
 		
 		System.out.println("Basic안의 c1.n값은=" + c1.n);
-		
-			
-		
-		
-		
-		
-		
-		
 		
 	}
 
