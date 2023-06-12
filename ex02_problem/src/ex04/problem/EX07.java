@@ -3,8 +3,7 @@ package ex04.problem;
 public class EX07 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		new MonthSchedule(30).run();
 	}
 
 }
