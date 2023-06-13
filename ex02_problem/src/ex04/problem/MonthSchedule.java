@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MonthSchedule 
 {
 	Scanner sc1;
-	
+	int age;
 	Day days[];
 	
 	public MonthSchedule(int total_day) 
@@ -54,8 +54,6 @@ public class MonthSchedule
 //		days[day-1] = new Day();
 		
 		days[day-1].set(work);
-		
-		
 	}
 	
 	private void view()
