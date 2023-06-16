@@ -35,7 +35,7 @@ class Sub{
 	}
 }
 
-class Mul{
+class Mul extends Object{
 	private int a;
 	private int b;
 	
