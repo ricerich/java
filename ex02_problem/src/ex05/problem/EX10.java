@@ -16,7 +16,11 @@ public class EX10
 		else
 			System.out.println(ok+"를 삭제하였습니다");
 		
-		System.out.println("손흥민의 값은 " + dic.get("손흥민"));
+		String value = dic.get("손흥민");
+		if(value == null)
+			System.out.println("가져올 대상이 없어요");
+		else
+			System.out.println("손흥민의 값은 " + dic.get("손흥민"));
 	}
 }
 

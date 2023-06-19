@@ -9,7 +9,7 @@ public class Dictionary extends PairMap
 	
 	
 	public Dictionary(int size) {
-		cnt = 0;
+		count = 0;
 		keyArray = new String[size];
 		valueArray = new String[size];
 		
@@ -17,7 +17,15 @@ public class Dictionary extends PairMap
 
 	@Override
 	String get(String key) {
-		// TODO Auto-generated method stub
+		
+		int i=0;//입력할 위치
+		for(i=0; i<count; i++)
+		{
+			//입력을 하는데, 같은 키값이 있다면, 해당 인덱스를 저장
+			if(keyArray[i].equals(key))
+				return valueArray[i];
+		}
+		
 		return null;
 	}
 
@@ -65,9 +73,19 @@ public class Dictionary extends PairMap
 		if(i == count)//같은 키값이 없을때, 삭제 못함
 			return null;
 
-		//같은 키값이 있을 때, 해당위치 i를 찾았고, 값을 반환 
+		//같은 키값이 있을 때, 해당위치 i를 찾았고, 값을 반환
+//		String value = valueArray[i];
+		key = keyArray[i];
 		count--;
-		return valueArray[i];
+		
+		for(int j=i; j<count; j++)
+		{
+			keyArray[i] = keyArray[i+1];
+			valueArray[i] = valueArray[i+1];
+		}
+		
+//		return value;
+		return key;
 	}
 
 	@Override
