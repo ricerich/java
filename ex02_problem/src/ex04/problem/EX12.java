@@ -109,11 +109,7 @@ public class EX12 {
 		}
 		
 		sc1.close();
-		
-		
-
 	}
-
 }
 
 
