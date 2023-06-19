@@ -4,36 +4,19 @@ public class EX10
 {
 	public static void main(String[] args) 
 	{
-		int arr1[][]= new int[4][4];
+		Dictionary dic = new Dictionary(10);
+		dic.put("손흥민", "축구");
+		dic.put("아이유", "가수");
+		dic.put("아이유", "배우");
+		System.out.println("아이유의 값은 " + dic.get("아이유"));
+		System.out.println("손흥민의 값은 " + dic.get("손흥민"));
+		String ok = dic.delete("손흥민");
+		if(ok == null)
+			System.out.println("삭제 할 대상이 없어요");
+		else
+			System.out.println(ok+"를 삭제하였습니다");
 		
-		//0으로 전부 넣기
-		for(int i=0; i<arr1.length;i++){
-			for(int j=0; j<arr1[i].length;j++) {
-				arr1[i][j] = 0;
-			}
-		}
-		
-		for(int i=0; i<10;i++){
-			int row = (int)(Math.random()*4);
-			int col = (int)(Math.random()*4);
-			
-			if(arr1[row][col] == 0)
-				arr1[row][col] = (int)(Math.random()*10 +1);
-			else
-			{
-				i--;
-			}
-			
-		}
-		
-		
-		//배열의 원소 출력
-		for(int i=0; i<arr1.length;i++){
-			for(int j=0; j<arr1[i].length;j++) {
-				System.out.print(arr1[i][j]+"\t") ;
-			}
-			System.out.println();
-		}
+		System.out.println("손흥민의 값은 " + dic.get("손흥민"));
 	}
 }
 
