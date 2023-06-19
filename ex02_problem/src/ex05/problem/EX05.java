@@ -40,11 +40,11 @@ class ColorPoint extends Point{
 		this.color = color;
 	}
 
-	@Override
-	public String toString() {
-		String str = color+"의 색은 ("+getX()+","+getY()+")의 점";
-		return str;
-	}
+//	@Override
+//	public String toString() {
+//		String str = color+"의 색은 ("+getX()+","+getY()+")의 점";
+//		return str;
+//	}
 
 
 
