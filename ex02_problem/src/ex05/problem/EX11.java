@@ -21,7 +21,6 @@ class Add extends Calc{
 	{
 		return a+b;
 	}
-	
 }
 
 class Sub extends Calc{
