@@ -1,4 +1,4 @@
-package ex10;
+package ex10.p4;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;

@@ -1,4 +1,4 @@
-package ex10;
+package ex10.p2;
 
 public class Ex02 {
 

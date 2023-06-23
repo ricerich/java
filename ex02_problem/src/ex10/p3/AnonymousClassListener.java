@@ -1,4 +1,4 @@
-package ex10;
+package ex10.p3;
 
 import java.awt.Container;
 import java.awt.FlowLayout;

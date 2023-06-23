@@ -1,4 +1,4 @@
-package ex10;
+package ex10.p4;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -6,7 +6,7 @@ import java.awt.event.MouseListener;
 
 import javax.swing.*;
 
-public class MouseAdapterEX extends JFrame 
+public class MouseListenerEX extends JFrame 
 {
 	private JLabel la;
 	
@@ -15,15 +15,14 @@ public class MouseAdapterEX extends JFrame
 		return la;
 	}
 	
-	public MouseAdapterEX()
+	public MouseListenerEX()
 	{
-		setTitle("Mouse 이벤트 예제2222");
+		setTitle("Mouse 이벤트 예제1111");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Container c = getContentPane();
 		
 //		MyMouseListener lis1 = new MyMouseListener();
-//		c.addMouseListener(new MyMouseListener(this));
-		c.addMouseListener(new MyMouseAdapter(this));
+		c.addMouseListener(new MyMouseListener(this));
 	
 		c.setLayout(null);
 		

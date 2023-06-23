@@ -1,4 +1,4 @@
-package ex10;
+package ex10.p5;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
